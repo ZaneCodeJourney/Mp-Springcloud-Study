@@ -6,10 +6,10 @@ import lombok.Data;
 
 @Data
 public class PageQuery {
-    private Integer pageNo;
-    private Integer pageSize;
+    private Integer pageNo = 1;
+    private Integer pageSize = 5;
     private String sortBy;
-    private Boolean isAsc;
+    private Boolean isAsc = true;
 
     public <T>  Page<T> toMpPage(OrderItem ... orders){
         // 1.分页条件
